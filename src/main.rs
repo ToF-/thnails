@@ -12,6 +12,14 @@ use std::io::Cursor;
 // tests/assets -> thumbnails/tests/assets
 
 
+fn no_absolute_path(s: &str) -> Result<String, String> {
+    let path = Path::new(s);
+    if path.is_absolute() {
+        Err(format!("absolute path not allowed:{}", s))
+    } else {
+        Ok(String::from(s))
+    }
+}
 // declarative setting of arguments
 /// Thnails
 #[derive(Parser, Clone, Debug)]
@@ -19,7 +27,7 @@ use std::io::Cursor;
 /// Pattern that displayed files must have
 struct Args {
     /// Directory to search
-    #[arg(short, long, default_value=".")]
+    #[arg(short, long, default_value=".",value_parser=no_absolute_path)]
     directory: Option<String>,
 }
 
@@ -28,9 +36,9 @@ fn append_dir(path: &Path, dir: &str) -> PathBuf {
     dirs.join(dir).join(path.file_name().unwrap())
 }
 
-fn get_folders_in_directory(dir_path: &str) -> io::Result<Vec<String>> {
+fn get_folders_in_directory(source_path: &Path) -> io::Result<Vec<String>> {
     let mut entries: Vec<String> = Vec::new();
-    let source_path = Path::new(dir_path);
+    println!("{}", source_path.display().to_string());
     for entry in WalkDir::new(source_path).into_iter().filter_map(|e| e.ok()) {
         if entry.file_type().is_dir() {
             let path = entry.into_path();
@@ -42,8 +50,9 @@ fn get_folders_in_directory(dir_path: &str) -> io::Result<Vec<String>> {
 fn main() {
     let args = Args::parse();
     println!("{:?}", args);
-    let entries = if let Some(path) = args.directory {
-        get_folders_in_directory(path.as_str())
+    let entries = if let Some(dir) = args.directory {
+        let path = Path::new(&dir);
+        get_folders_in_directory(path)
     } else {
         panic!("can't search directory");
     };
