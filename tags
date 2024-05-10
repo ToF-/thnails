@@ -1,0 +1,270 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+Ancestor	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^struct Ancestor {$/;"	s
+Args	/Users/christophethibaut/Coding/thnails/src/main.rs	/^struct Args {$/;"	s
+CASES	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^        static CASES: &'static [&'static str] = &[$/;"	c
+COUNTER	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^        static COUNTER: AtomicUsize = ATOMIC_USIZE_INIT;$/;"	c
+Dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^pub struct Dir {$/;"	s
+DirEntry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^pub struct DirEntry {$/;"	s
+DirEntryExt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^pub trait DirEntryExt {$/;"	t
+DirList	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^enum DirList {$/;"	g
+Err	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    type Err = FromStrError;$/;"	T
+Error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^pub struct Error {$/;"	s
+ErrorInner	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^enum ErrorInner {$/;"	g
+FFMPEG	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/utils/ffmpeg_cli.rs	/^const FFMPEG: &str = "ffmpeg";$/;"	c
+FilterEntry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^pub struct FilterEntry<I, P> {$/;"	s
+FromStrError	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub struct FromStrError {$/;"	s
+HEX_PREFIX	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    const HEX_PREFIX: &str = "0x";$/;"	c
+HEX_PREFIX_LEN	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    const HEX_PREFIX_LEN: usize = HEX_PREFIX.len();$/;"	c
+HEX_PREFIX_UPPER	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    const HEX_PREFIX_UPPER: &str = "0X";$/;"	c
+IMAGE_WEBP_MIME	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/image_format.rs	/^const IMAGE_WEBP_MIME: &str = "image\/webp";$/;"	c
+Indexed	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^struct Indexed(usize, usize);$/;"	s
+IntoIter	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    type IntoIter = IntoIter;$/;"	T
+IntoIter	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^pub struct IntoIter {$/;"	s
+Item	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    type Item = (Name<'a>, Name<'a>);$/;"	T
+Item	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    type Item = Result<Mime, &'a str>;$/;"	T
+Item	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    type Item = Result<DirEntry>;$/;"	T
+Mime	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub struct Mime {$/;"	s
+MimeIter	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub struct MimeIter<'a> {$/;"	s
+Name	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub struct Name<'a> {$/;"	s
+OVERFLOW_MSG	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^static OVERFLOW_MSG: &str = "number too large to fit in target type";$/;"	c
+ParamSource	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^enum ParamSource {$/;"	g
+Params	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub struct Params<'a>(ParamsInner<'a>);$/;"	s
+ParamsInner	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^enum ParamsInner<'a> {$/;"	g
+ParseError	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^pub enum ParseError {$/;"	g
+RecursiveResults	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^pub struct RecursiveResults {$/;"	s
+Result	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^pub type Result<T> = ::std::result::Result<T, Error>;$/;"	T
+Result	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^pub type Result<T> = result::Result<T, Box<dyn error::Error + Send + Sync>>;$/;"	T
+SiPrefix	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^enum SiPrefix {$/;"	g
+Source	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^enum Source {$/;"	g
+TEXT_JAVSCRIPT	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^pub const TEXT_JAVSCRIPT: Mime = TEXT_JAVASCRIPT;$/;"	c
+TOKEN_MAP	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^static TOKEN_MAP: [bool; 256] = byte_map![$/;"	c
+TRIES	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^        static TRIES: usize = 100;$/;"	c
+TempDir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^pub struct TempDir(PathBuf);$/;"	s
+ThumbError	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^pub enum ThumbError {$/;"	g
+ThumbResult	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^pub type ThumbResult<T> = Result<T, ThumbError>;$/;"	T
+Thumbnail	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^pub struct Thumbnail {$/;"	s
+ThumbnailSize	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/size.rs	/^pub enum ThumbnailSize {$/;"	g
+WalkDir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^pub struct WalkDir {$/;"	s
+WalkDirOptions	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^struct WalkDirOptions {$/;"	s
+__Atoms	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^        enum __Atoms {$/;"	g
+append_dir	/Users/christophethibaut/Coding/thnails/src/main.rs	/^fn append_dir(path: &Path, dir: &str) -> PathBuf {$/;"	f
+as_ref	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn as_ref(&self) -> &str {$/;"	f
+as_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn as_str(&self) -> &'a str {$/;"	f
+assert_no_errors	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn assert_no_errors(&self) {$/;"	f
+assert_send	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^    fn assert_send<T: Send>() {}$/;"	f
+assert_sync	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^    fn assert_sync<T: Sync>() {}$/;"	f
+atom	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn atom(&self) -> u8 {$/;"	f
+broken_sym_root_dir_follow_and_root_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn broken_sym_root_dir_follow_and_root_nofollow() {$/;"	f
+broken_sym_root_dir_nofollow_and_root_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn broken_sym_root_dir_nofollow_and_root_nofollow() {$/;"	f
+broken_sym_root_dir_root_is_always_followed	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn broken_sym_root_dir_root_is_always_followed() {$/;"	f
+byte_map	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^macro_rules! byte_map {$/;"	d
+cause	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    fn cause(&self) -> Option<&dyn error::Error> {$/;"	f
+check_loop	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn check_loop<P: AsRef<Path>>(&self, child: P) -> Result<()> {$/;"	f
+check_range	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^fn check_range<T: Ord + std::fmt::Display>(val: T, min: T, max: T) -> Result<T, String>$/;"	f
+clone	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    fn clone(&self) -> DirEntry {$/;"	f
+close	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn close(&mut self) {$/;"	f
+cmp	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn cmp(&self, other: &Mime) -> Ordering {$/;"	f
+contents_first	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn contents_first(mut self, yes: bool) -> Self {$/;"	f
+contents_first	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn contents_first() {$/;"	f
+create_thumbnails	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^pub fn create_thumbnails<R: BufRead + Seek, I: IntoIterator<Item = ThumbnailSize>>($/;"	f
+depth	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn depth(&self) -> usize {$/;"	f
+depth	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    pub fn depth(&self) -> usize {$/;"	f
+description	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn description(&self) -> &str {$/;"	f
+description	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    fn description(&self) -> &str {$/;"	f
+description	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    fn description(&self) -> &str {$/;"	f
+device_num	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/util.rs	/^pub fn device_num<P: AsRef<Path>>(_: P) -> io::Result<u64> {$/;"	f
+device_num	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/util.rs	/^pub fn device_num<P: AsRef<Path>>(path: P) -> io::Result<u64> {$/;"	f
+digits	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    fn digits(&self) -> usize {$/;"	f
+dimensions	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/size.rs	/^    pub fn dimensions(&self) -> (u32, u32) {$/;"	f
+drop	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    fn drop(&mut self) {$/;"	f
+empty	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn empty() {$/;"	f
+empty_file	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn empty_file() {$/;"	f
+empty_file_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn empty_file_follow() {$/;"	f
+empty_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn empty_follow() {$/;"	f
+ents	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn ents(&self) -> &[DirEntry] {$/;"	f
+eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn eq(&self, mime: &Mime) -> bool {$/;"	f
+eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn eq(&self, other: & &'b str) -> bool {$/;"	f
+eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn eq(&self, other: &Mime) -> bool {$/;"	f
+eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn eq(&self, other: &Name<'a>) -> bool {$/;"	f
+eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn eq(&self, s: & &'a str) -> bool {$/;"	f
+eq_ascii	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^fn eq_ascii(a: &str, b: &str) -> bool {$/;"	f
+err	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^macro_rules! err {$/;"	d
+errs	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn errs(&self) -> &[Error] {$/;"	f
+essence_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn essence_str(&self) -> &str {$/;"	f
+ffmpeg	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/utils/ffmpeg_cli.rs	/^fn ffmpeg<I: IntoIterator<Item = S>, S: AsRef<OsStr>>(args: I) -> ThumbResult<Vec<u8>> {$/;"	f
+file_name	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn file_name(&self) -> &OsStr {$/;"	f
+file_type	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn file_type(&self) -> fs::FileType {$/;"	f
+filter_entry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn filter_entry(self, predicate: P) -> FilterEntry<Self, P> {$/;"	f
+filter_entry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn filter_entry<P>(self, predicate: P) -> FilterEntry<Self, P>$/;"	f
+filter_entry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn filter_entry() {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {$/;"	f
+fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn fmt($/;"	f
+follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn follow(&self, mut dent: DirEntry) -> Result<DirEntry> {$/;"	f
+follow_links	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn follow_links(mut self, yes: bool) -> Self {$/;"	f
+follow_root_links	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn follow_root_links(mut self, yes: bool) -> Self {$/;"	f
+from	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn from(name: Name<'a>) -> &'a str {$/;"	f
+from	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^    fn from(e: ImageError) -> Self {$/;"	f
+from	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^    fn from(e: io::Error) -> Self {$/;"	f
+from	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    fn from(walk_err: Error) -> io::Error {$/;"	f
+from_char	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    fn from_char(symbol: char) -> Option<Self> {$/;"	f
+from_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn from_str(s: &str) -> Result<Mime, Self::Err> {$/;"	f
+get_base_image	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/mod.rs	/^pub fn get_base_image<R: BufRead + Seek>(reader: R, mime: Mime) -> ThumbResult<DynamicImage> {$/;"	f
+get_deferred_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn get_deferred_dir(&mut self) -> Option<DirEntry> {$/;"	f
+get_files_in_directory	/Users/christophethibaut/Coding/thnails/src/main.rs	/^fn get_files_in_directory(dir_path: &str) -> io::Result<Vec<String>> {$/;"	f
+get_param	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn get_param<'a, N>(&'a self, attr: N) -> Option<Name<'a>>$/;"	f
+get_png_frame	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/utils/ffmpeg_cli.rs	/^pub fn get_png_frame(video_file: &str, index: usize) -> ThumbResult<Vec<u8>> {$/;"	f
+get_video_frame	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/video_format.rs	/^pub fn get_video_frame<R: BufRead + Seek>(mut reader: R, mime: Mime) -> ThumbResult<DynamicImage> {$/;"	f
+handle_entry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn handle_entry($/;"	f
+has_params	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn has_params(&self) -> bool {$/;"	f
+hash	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn hash<T: Hasher>(&self, hasher: &mut T) {$/;"	f
+imp	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^        fn imp(src: &Path, link_name: &Path) -> io::Result<()> {$/;"	f
+ino	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    fn ino(&self) -> u64 {$/;"	f
+ino	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    fn ino(&self) -> u64;$/;"	f
+into_io_error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    pub fn into_io_error(self) -> Option<io::Error> {$/;"	f
+into_iter	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn into_iter(self) -> IntoIter {$/;"	f
+into_path	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn into_path(self) -> PathBuf {$/;"	f
+io_error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    pub fn io_error(&self) -> Option<&io::Error> {$/;"	f
+is_ffmpeg_installed	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/utils/ffmpeg_cli.rs	/^pub fn is_ffmpeg_installed() -> bool {$/;"	f
+is_hidden	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^fn is_hidden(entry: &DirEntry) -> bool {$/;"	f
+is_restricted_quoted_char	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn is_restricted_quoted_char(c: u8) -> bool {$/;"	f
+is_same	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn is_same(&self, child: &Handle) -> io::Result<bool> {$/;"	f
+is_same_file_system	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn is_same_file_system(&mut self, dent: &DirEntry) -> Result<bool> {$/;"	f
+is_token	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn is_token(c: u8) -> bool {$/;"	f
+itry	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^macro_rules! itry {$/;"	d
+join	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn join<P: AsRef<Path>>(&self, path: P) -> PathBuf {$/;"	f
+loop_ancestor	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    pub fn loop_ancestor(&self) -> Option<&Path> {$/;"	f
+lower_ascii_with_params	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn lower_ascii_with_params(s: &str, semi: usize, params: &[(Indexed, Indexed)]) -> String {$/;"	f
+main	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-4.5.4/src/bin/stdio-fixture.rs	/^fn main() {$/;"	f
+main	/Users/christophethibaut/Coding/thnails/src/main.rs	/^fn main() {$/;"	f
+many_dirs	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn many_dirs() {$/;"	f
+many_files	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn many_files() {$/;"	f
+many_mixed	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn many_mixed() {$/;"	f
+max_depth	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn max_depth(mut self, depth: usize) -> Self {$/;"	f
+max_depth_0	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn max_depth_0() {$/;"	f
+max_depth_1	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn max_depth_1() {$/;"	f
+max_depth_2	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn max_depth_2() {$/;"	f
+max_open	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn max_open(mut self, mut n: usize) -> Self {$/;"	f
+maybe_hex	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^pub fn maybe_hex<T: Num + sign::Unsigned>(s: &str) -> Result<T, String>$/;"	f
+maybe_hex_range	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^pub fn maybe_hex_range<T: Num + sign::Unsigned>(s: &str, min: T, max: T) -> Result<T, String>$/;"	f
+metadata	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn metadata(&self) -> Result<fs::Metadata> {$/;"	f
+metadata_internal	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    fn metadata_internal(&self) -> Result<fs::Metadata> {$/;"	f
+mime_constant	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^macro_rules! mime_constant {$/;"	d
+mime_constant_test	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^macro_rules! mime_constant_test {$/;"	d
+mime_eq_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^fn mime_eq_str(mime: &Mime, s: &str) -> bool {$/;"	f
+mime_to_image_format	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/image_format.rs	/^fn mime_to_image_format(mime: Mime) -> Option<ImageFormat> {$/;"	f
+mimes	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^macro_rules! mimes {$/;"	d
+min_depth	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn min_depth(mut self, depth: usize) -> Self {$/;"	f
+min_depth_1	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn min_depth_1() {$/;"	f
+min_depth_2	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn min_depth_2() {$/;"	f
+min_max_depth_diff_0	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn min_max_depth_diff_0() {$/;"	f
+min_max_depth_diff_1	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn min_max_depth_diff_1() {$/;"	f
+min_max_depth_diff_nada	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn min_max_depth_diff_nada() {$/;"	f
+mkdirp	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn mkdirp<P: AsRef<Path>>(&self, path: P) {$/;"	f
+multiplier	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^    fn multiplier(&self) -> u128 {$/;"	f
+name_eq_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^fn name_eq_str(name: &Name, s: &str) -> bool {$/;"	f
+names	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^macro_rules! names {$/;"	d
+nested	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn nested() {$/;"	f
+nested_small_max_open	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn nested_small_max_open() {$/;"	f
+new	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    pub fn new(s: &'a str) -> Self {$/;"	f
+new	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn new(dent: &DirEntry) -> io::Result<Ancestor> {$/;"	f
+new	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn new<P: AsRef<Path>>(root: P) -> Self {$/;"	f
+new	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn new() -> Result<TempDir> {$/;"	f
+next	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn next(&mut self) -> Option<(Name<'a>, Name<'a>)> {$/;"	f
+next	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    fn next(&mut self) -> Option<Self::Item> {$/;"	f
+next	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn next(&mut self) -> Option<Result<DirEntry>> {$/;"	f
+number_range	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^pub fn number_range<T: Ord + PartialOrd + std::fmt::Display>($/;"	f
+one_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn one_dir() {$/;"	f
+one_dir_one_file	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn one_dir_one_file() {$/;"	f
+one_file	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn one_file() {$/;"	f
+params	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn params<'a>(&'a self) -> Params<'a> {$/;"	f
+params_eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^fn params_eq(semicolon: usize, a: &str, b: &str) -> bool {$/;"	f
+params_from_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn params_from_str(s: &str, iter: &mut Enumerate<Bytes>, mut start: usize) -> Result<ParamSource, ParseError> {$/;"	f
+parse	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^pub fn parse(s: &str) -> Result<Mime, ParseError> {$/;"	f
+parse_post	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^fn parse_post<T>(mut post: String, digits: usize) -> Result<T, String>$/;"	f
+partial_cmp	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn partial_cmp(&self, other: &Mime) -> Option<Ordering> {$/;"	f
+path	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn path(&self) -> &Path {$/;"	f
+path	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    pub fn path(&self) -> Option<&Path> {$/;"	f
+path	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn path(&self) -> &Path {$/;"	f
+path_is_symlink	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/dent.rs	/^    pub fn path_is_symlink(&self) -> bool {$/;"	f
+paths	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn paths(&self) -> Vec<PathBuf> {$/;"	f
+pop	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn pop(&mut self) {$/;"	f
+push	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn push(&mut self, dent: &DirEntry) -> Result<()> {$/;"	f
+read_generic_image	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/image_format.rs	/^fn read_generic_image<R: BufRead + Seek>(reader: R, format: Option<ImageFormat>) -> ThumbResult<DynamicImage> {$/;"	f
+read_image	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/image_format.rs	/^pub fn read_image<R: BufRead + Seek>(reader: R, mime: Mime) -> ThumbResult<DynamicImage> {$/;"	f
+read_webp_image	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/image_format.rs	/^fn read_webp_image<R: Read>(mut reader: R) -> ThumbResult<DynamicImage> {$/;"	f
+regression_skip_current_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn regression_skip_current_dir() {$/;"	f
+resize_images	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^fn resize_images(image: DynamicImage, sizes: &[ThumbnailSize]) -> Vec<DynamicImage> {$/;"	f
+run_recursive	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn run_recursive<I>(&self, it: I) -> RecursiveResults$/;"	f
+s	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn s(&self) -> &str {$/;"	f
+s	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^    fn s(&self) -> &str {$/;"	f
+same_file_system	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn same_file_system(mut self, yes: bool) -> Self {$/;"	f
+same_file_system	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn same_file_system() {$/;"	f
+semicolon	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn semicolon(&self) -> Option<usize> {$/;"	f
+send_sync_traits	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn send_sync_traits() {$/;"	f
+si_number	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^pub fn si_number<T>(s: &str) -> Result<T, String>$/;"	f
+si_number_range	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^pub fn si_number_range<T: Ord + PartialOrd + std::fmt::Display>($/;"	f
+siblings	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn siblings() {$/;"	f
+size	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^    pub fn size(&self) -> (u32, u32) {$/;"	f
+size_hint	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn size_hint(&self) -> (usize, Option<usize>) {$/;"	f
+skip_current_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn skip_current_dir(&mut self) {$/;"	f
+skip_current_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn skip_current_dir() {$/;"	f
+skippable	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn skippable(&self) -> bool {$/;"	f
+sort_by	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn sort_by<F>(mut self, cmp: F) -> Self$/;"	f
+sort_by	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sort_by() {$/;"	f
+sort_by_file_name	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn sort_by_file_name(self) -> Self {$/;"	f
+sort_by_file_name	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sort_by_file_name() {$/;"	f
+sort_by_key	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    pub fn sort_by_key<K, F>(self, mut cmp: F) -> Self$/;"	f
+sort_by_key	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sort_by_key() {$/;"	f
+sort_max_open	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sort_max_open() {$/;"	f
+sorted_ents	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn sorted_ents(&self) -> Vec<DirEntry> {$/;"	f
+sorted_paths	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn sorted_paths(&self) -> Vec<PathBuf> {$/;"	f
+source	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/error.rs	/^    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {$/;"	f
+source	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/error.rs	/^    fn source(&self) -> Option<&(dyn error::Error + 'static)> {$/;"	f
+stringify	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/clap-num-1.1.1/src/lib.rs	/^fn stringify<T: std::fmt::Display>(e: T) -> String {$/;"	f
+subtype	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn subtype(&self) -> Name {$/;"	f
+suffix	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn suffix(&self) -> Option<Name> {$/;"	f
+sym_dir_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_dir_follow() {$/;"	f
+sym_dir_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_dir_nofollow() {$/;"	f
+sym_dir_self_loop_io_error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_dir_self_loop_io_error() {$/;"	f
+sym_file_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_file_follow() {$/;"	f
+sym_file_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_file_nofollow() {$/;"	f
+sym_file_self_loop_io_error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_file_self_loop_io_error() {$/;"	f
+sym_loop_detect	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_loop_detect() {$/;"	f
+sym_noloop	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_noloop() {$/;"	f
+sym_root_dir_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_root_dir_follow() {$/;"	f
+sym_root_dir_nofollow_root_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_root_dir_nofollow_root_follow() {$/;"	f
+sym_root_dir_nofollow_root_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_root_dir_nofollow_root_nofollow() {$/;"	f
+sym_root_file_follow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_root_file_follow() {$/;"	f
+sym_root_file_nofollow	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_root_file_nofollow() {$/;"	f
+sym_self_loop_no_error	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/recursive.rs	/^fn sym_self_loop_no_error() {$/;"	f
+symlink_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn symlink_dir<P1: AsRef<Path>, P2: AsRef<Path>>($/;"	f
+symlink_file	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn symlink_file<P1: AsRef<Path>, P2: AsRef<Path>>($/;"	f
+test_case_sensitive_values	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_case_sensitive_values() {$/;"	f
+test_essence_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_essence_str() {$/;"	f
+test_get_param	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_get_param() {$/;"	f
+test_lookup_tables	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn test_lookup_tables() {$/;"	f
+test_matching	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_matching() {$/;"	f
+test_mime_fmt	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_mime_fmt() {$/;"	f
+test_mime_from_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_mime_from_str() {$/;"	f
+test_mime_from_str_empty_parameter_list	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_mime_from_str_empty_parameter_list() {$/;"	f
+test_mimes_macro_consts	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^        fn test_mimes_macro_consts() {$/;"	f
+test_name_eq	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_name_eq() {$/;"	f
+test_names_macro_consts	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^        fn test_names_macro_consts() {$/;"	f
+test_parse_iterator	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn test_parse_iterator() {$/;"	f
+test_parse_iterator_all_invalid	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn test_parse_iterator_all_invalid() {$/;"	f
+test_parse_iterator_invalid	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs	/^fn test_parse_iterator_invalid() {$/;"	f
+test_subtype	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_subtype() {$/;"	f
+test_suffix	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_suffix() {$/;"	f
+test_type_	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn test_type_() {$/;"	f
+tmp	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn tmp() -> Dir {$/;"	f
+touch	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn touch<P: AsRef<Path>>(&self, path: P) {$/;"	f
+touch_all	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/tests/util.rs	/^    pub fn touch_all<P: AsRef<Path>>(&self, paths: &[P]) {$/;"	f
+type_	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn type_(&self) -> Name {$/;"	f
+write_jpeg	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^    pub fn write_jpeg<W: Write + Seek>(self, writer: &mut W, quality: u8) -> ThumbResult<()> {$/;"	f
+write_png	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^    pub fn write_png<W: Write + Seek>(self, writer: &mut W) -> ThumbResult<()> {$/;"	f
