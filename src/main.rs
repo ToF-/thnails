@@ -34,10 +34,14 @@ fn no_absolute_path(s: &str) -> Result<String, String> {
 #[command(infer_subcommands = true, infer_long_args = true, author, version, about, long_about = None)]
 /// Pattern that displayed files must have
 struct Args {
-    /// Source directory to search
+    /// file only (default: diretory)
+    #[arg(short, long, default_value_t = false)] 
+    file: bool,
+
+    /// Source directory (or file) to search
     #[arg(short, long, value_parser=no_absolute_path)]
     source: String,
-    /// Target directory to create
+    /// Target directory (or file) to create
     #[arg(short, long)]
     target: String,
 }
@@ -80,7 +84,7 @@ fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPa
     Ok(pairs)
 }
 fn get_extension_from_filename(path: &Path) -> Option<&str> {
-        path.extension()
+    path.extension()
         .and_then(OsStr::to_str)
 }
 fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
@@ -105,13 +109,13 @@ fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
                     },
                     _ => (),
                 }
-    // let reader = BufReader::new(input_file);
-    // let mut  thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small, ThumbnailSize::Medium]).unwrap();
+                // let reader = BufReader::new(input_file);
+                // let mut  thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small, ThumbnailSize::Medium]).unwrap();
 
-    // let thumbnail = thumbnails.pop().unwrap();
-    // let mut buf = Cursor::new(Vec::<u8>::new());
-    // let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
-    // thumbnail.write_png(&mut output_file).unwrap();
+                // let thumbnail = thumbnails.pop().unwrap();
+                // let mut buf = Cursor::new(Vec::<u8>::new());
+                // let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
+                // thumbnail.write_png(&mut output_file).unwrap();
             }
             Err(err) => {
                 println!("can't open: {}", pair.source)
@@ -132,21 +136,48 @@ fn create_target_folders(folders: Vec<Entry>) -> io::Result<()> {
 }
 fn main() {
     let args = Args::parse();
-    println!("{:?}", args);
-    let path = Path::new(&args.source);
-    match get_target_folders(path, args.target.clone()) {
-        Ok(folders) => match create_target_folders(folders) {
-            Ok(_) => match get_entry_pairs(path, args.target) {
-                Ok(pairs) => {
-                    match create_all_thumbnails(pairs) {
-                        Ok(()) => (),
-                        Err(err) => println!("{}", err),
-                    }
+    if args.file {
+        let source_path = Path::new(&args.source);
+        match File::open(&args.source.clone()) {
+            Ok(input_file) => {
+                let source_extension = get_extension_from_filename(source_path).unwrap();
+                let reader = BufReader::new(input_file);
+                let mut buffer = Cursor::new(Vec::<u8>::new());
+                let mut output_file = File::create(&args.target).unwrap();
+                match source_extension {
+                    "jpg" | "jpeg" | "JPG" | "JPEG" => {
+                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]).unwrap();
+                        let thumbnail = thumbnails.pop().unwrap();
+                        thumbnail.write_jpeg(&mut output_file,255).unwrap()
+                    },
+                    "png" | "PNG" => {
+                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small]).unwrap();
+                        let thumbnail = thumbnails.pop().unwrap();
+                        thumbnail.write_png(&mut output_file).unwrap()
+                    },
+                    _ => (),
                 }
-                Err(err) => println!("{}", err),
+            },
+            Err(err) => {
+                println!("error: {}", err)
             }
+        }
+    } else {
+        let path = Path::new(&args.source);
+        match get_target_folders(path, args.target.clone()) {
+            Ok(folders) => match create_target_folders(folders) {
+                Ok(_) => match get_entry_pairs(path, args.target) {
+                    Ok(pairs) => {
+                        match create_all_thumbnails(pairs) {
+                            Ok(()) => (),
+                            Err(err) => println!("{}", err),
+                        }
+                    }
+                    Err(err) => println!("{}", err),
+                }
+                Err(err) => println!("{}", err)
+            },
             Err(err) => println!("{}", err)
-        },
-        Err(err) => println!("{}", err)
+        }
     }
 }
