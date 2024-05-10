@@ -116,7 +116,7 @@ from_char	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bb
 from_str	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    fn from_str(s: &str) -> Result<Mime, Self::Err> {$/;"	f
 get_base_image	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/mod.rs	/^pub fn get_base_image<R: BufRead + Seek>(reader: R, mime: Mime) -> ThumbResult<DynamicImage> {$/;"	f
 get_deferred_dir	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir-2.5.0/src/lib.rs	/^    fn get_deferred_dir(&mut self) -> Option<DirEntry> {$/;"	f
-get_files_in_directory	/Users/christophethibaut/Coding/thnails/src/main.rs	/^fn get_files_in_directory(dir_path: &str) -> io::Result<Vec<String>> {$/;"	f
+get_folders_in_directory	/Users/christophethibaut/Coding/thnails/src/main.rs	/^fn get_folders_in_directory(dir_path: &str) -> io::Result<Vec<String>> {$/;"	f
 get_param	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn get_param<'a, N>(&'a self, attr: N) -> Option<Name<'a>>$/;"	f
 get_png_frame	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/utils/ffmpeg_cli.rs	/^pub fn get_png_frame(video_file: &str, index: usize) -> ThumbResult<Vec<u8>> {$/;"	f
 get_video_frame	/Users/christophethibaut/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/formats/video_format.rs	/^pub fn get_video_frame<R: BufRead + Seek>(mut reader: R, mime: Mime) -> ThumbResult<DynamicImage> {$/;"	f
