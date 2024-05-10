@@ -1,14 +1,11 @@
 use std::io;
 use std::ffi::OsStr;
-use std::path::{Path,PathBuf};
+use std::path::Path;
 use walkdir::WalkDir;
-use clap::{Parser,ValueEnum};
-use clap_num::number_range;
-use thumbnailer::{create_thumbnails, Thumbnail, ThumbnailSize};
-use std::fs::{metadata,File, create_dir_all};
+use clap::Parser;
+use thumbnailer::{create_thumbnails, ThumbnailSize};
+use std::fs::{File, create_dir_all};
 use std::io::BufReader;
-use std::io::Cursor;
-use mime_guess;
 
 // . -> thumbnails
 // tests/assets -> thumbnails/tests/assets
@@ -20,14 +17,6 @@ struct EntryPair {
     target: Entry,
 }
 
-fn no_absolute_path(s: &str) -> Result<String, String> {
-    let path = Path::new(s);
-    if path.is_absolute() {
-        Err(format!("absolute path not allowed:{}", s))
-    } else {
-        Ok(String::from(s))
-    }
-}
 // declarative setting of arguments
 /// Thnails
 #[derive(Parser, Clone, Debug)]
@@ -39,7 +28,7 @@ struct Args {
     file: bool,
 
     /// Source directory (or file) to search
-    #[arg(short, long, value_parser=no_absolute_path)]
+    #[arg(short, long)]
     source: String,
     /// Target directory (or file) to create
     #[arg(short, long)]
@@ -51,51 +40,51 @@ fn get_target_folders(source_path: &Path, target: String) -> io::Result<Vec<Entr
     for entry in WalkDir::new(source_path).into_iter().filter_map(|e| e.ok()) {
         if entry.file_type().is_dir() {
             let path = entry.into_path();
-            let target_path = Path::new(&target).join(path);
+            let sub_path = path.strip_prefix(source_path).unwrap();
+            let target_path = Path::new(&target).join(sub_path);
             entries.push(target_path.display().to_string());
         }
-    }
+    };
     Ok(entries)
 }
 
 fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPair>> {
     let mut pairs: Vec<EntryPair> = Vec::new();
     for entry in WalkDir::new(source_path).into_iter().filter_map(|e| e.ok()) {
-        let source_path = entry.into_path();
-        let valid_ext = if let Some(ext) = source_path.extension() {
+        let path = entry.into_path();
+        let valid_ext = if let Some(ext) = path.extension() {
             ext == "jpg" || ext == "jpeg" || ext == "png" || ext == "JPG" || ext == "JPEG" || ext == "PNG"
         } else {
             false
         };
         if valid_ext {
-            let target_path = Path::new(&target).join(source_path.clone());
-            if let Ok(metadata) = std::fs::metadata(&source_path) {
-                println!("creating thumbnail from {} to {}",
-                    source_path.display().to_string(),
-                    target_path.display().to_string());
-                pairs.push(EntryPair { 
-                    source: source_path.into_os_string().into_string().unwrap(),
-                    target: target_path.into_os_string().into_string().unwrap(), });
-            } else {
-                println!("can't open: {}", source_path.display());
-            }
+            let sub_path = path.strip_prefix(source_path).unwrap();
+            let target_path = Path::new(&target).join(sub_path);
+            pairs.push(EntryPair { 
+                source: path.into_os_string().into_string().unwrap(),
+                target: target_path.into_os_string().into_string().unwrap(), });
         }
     };
     Ok(pairs)
 }
+
+// called `Result::unwrap()` on an `Err` value: Image(Decoding(DecodingError { format: Exact(Jpeg), underlying: Some(Format("first two bytes are not an SOI marker")) }))
+
 fn get_extension_from_filename(path: &Path) -> Option<&str> {
+
     path.extension()
         .and_then(OsStr::to_str)
 }
 fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
+    let mut i: usize = 0;
     for pair in pairs {
         match File::open(pair.source.clone()) {
             Ok(input_file) => {
                 let source_path = Path::new(pair.source.as_str());
                 let source_extension = get_extension_from_filename(source_path).unwrap();
                 let reader = BufReader::new(input_file);
-                let mut buffer = Cursor::new(Vec::<u8>::new());
-                let mut output_file = File::create(pair.target).unwrap();
+                let mut output_file = File::create(pair.target.clone()).unwrap();
+                println!("{} {}",i, pair.target);
                 match source_extension {
                     "jpg" | "jpeg" | "JPG" | "JPEG" => {
                         let mut thumbnails = create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]).unwrap();
@@ -117,10 +106,11 @@ fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
                 // let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
                 // thumbnail.write_png(&mut output_file).unwrap();
             }
-            Err(err) => {
+            Err(_) => {
                 println!("can't open: {}", pair.source)
             }
-        }
+        };
+        i+=1;
     }
     Ok(())
 }
@@ -142,7 +132,6 @@ fn main() {
             Ok(input_file) => {
                 let source_extension = get_extension_from_filename(source_path).unwrap();
                 let reader = BufReader::new(input_file);
-                let mut buffer = Cursor::new(Vec::<u8>::new());
                 let mut output_file = File::create(&args.target).unwrap();
                 match source_extension {
                     "jpg" | "jpeg" | "JPG" | "JPEG" => {
@@ -168,6 +157,7 @@ fn main() {
             Ok(folders) => match create_target_folders(folders) {
                 Ok(_) => match get_entry_pairs(path, args.target) {
                     Ok(pairs) => {
+                        println!("{}", pairs.len());
                         match create_all_thumbnails(pairs) {
                             Ok(()) => (),
                             Err(err) => println!("{}", err),
