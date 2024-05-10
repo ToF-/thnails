@@ -31,7 +31,7 @@ fn append_dir(path: &Path, dir: &str) -> PathBuf {
 fn get_folders_in_directory(dir_path: &str) -> io::Result<Vec<String>> {
     let mut entries: Vec<String> = Vec::new();
     let source_path = Path::new(dir_path);
-    for entry in WalkDir::new(dir_path).into_iter().filter_map(|e| e.ok()) {
+    for entry in WalkDir::new(source_path).into_iter().filter_map(|e| e.ok()) {
         if entry.file_type().is_dir() {
             let path = entry.into_path();
             entries.push(path.display().to_string());
@@ -48,12 +48,12 @@ fn main() {
         panic!("can't search directory");
     };
     println!("{:?}", entries);
-    let input_file = File::open("tests/assets/test.png").unwrap();
-    let reader = BufReader::new(input_file);
-    let mut  thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small, ThumbnailSize::Medium]).unwrap();
+    // let input_file = File::open("tests/assets/test.png").unwrap();
+    // let reader = BufReader::new(input_file);
+    // let mut  thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small, ThumbnailSize::Medium]).unwrap();
 
-    let thumbnail = thumbnails.pop().unwrap();
-    let mut buf = Cursor::new(Vec::<u8>::new());
-    let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
-    thumbnail.write_png(&mut output_file).unwrap();
+    // let thumbnail = thumbnails.pop().unwrap();
+    // let mut buf = Cursor::new(Vec::<u8>::new());
+    // let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
+    // thumbnail.write_png(&mut output_file).unwrap();
 }
