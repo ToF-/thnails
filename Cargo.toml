@@ -9,6 +9,7 @@ edition = "2021"
 clap = { version = "4.3.19", features = ["derive"] }
 clap-num = "1.1.1"
 mime = "0.3.17"
+mime_guess = "2.0.4"
 thumbnailer = "0.5.1"
 walkdir = "2.5.0"
 
