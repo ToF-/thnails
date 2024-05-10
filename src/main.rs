@@ -1,9 +1,11 @@
 use std::io;
+use std::io::{Error,ErrorKind};
 use std::ffi::OsStr;
 use std::path::Path;
 use walkdir::WalkDir;
 use clap::Parser;
 use thumbnailer::{create_thumbnails, ThumbnailSize};
+use thumbnailer::error::{ThumbResult, ThumbError};
 use std::fs::{File, create_dir_all};
 use std::io::BufReader;
 
@@ -68,49 +70,84 @@ fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPa
     Ok(pairs)
 }
 
-// called `Result::unwrap()` on an `Err` value: Image(Decoding(DecodingError { format: Exact(Jpeg), underlying: Some(Format("first two bytes are not an SOI marker")) }))
-
-fn get_extension_from_filename(path: &Path) -> Option<&str> {
-
-    path.extension()
-        .and_then(OsStr::to_str)
+fn create_thumbnail(source: String, target: String, number: Option<usize>) -> ThumbResult<()> {
+    if let Some(n) = number {
+        println!("{:6} {}", n, target.clone())
+    } else {
+        println!("{}", target.clone())
+    };
+    match File::open(source.clone()) {
+        Err(err) => {
+            println!("error opening file {}: {}", source, err);
+            return Err(ThumbError::IO(err))
+        },
+        Ok(input_file) => {
+            let source_path = Path::new(source.as_str());
+            let source_extension = match source_path.extension().and_then(OsStr::to_str) {
+                None => {
+                    println!("error: file {} has no extension", source.clone());
+                    return Err(ThumbError::IO(Error::new(ErrorKind::Other, "no extension")))
+                },
+                Some(s) => s,
+            };
+            let reader = BufReader::new(input_file);
+            let mut output_file = match File::create(target.clone()) {
+                Err(err) => {
+                    println!("error while creating file {}: {}",
+                        target.clone(),
+                        err);
+                    return Err(ThumbError::IO(err))
+                },
+                Ok(file) => file,
+            };
+            match source_extension {
+                "jpg" | "jpeg" | "JPG" | "JPEG" => {
+                    let mut thumbnails = match create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]) {
+                        Ok(tns) => tns,
+                        Err(err) => {
+                            println!("error while creating thumbnails:{:?}", err);
+                            return Err(err)
+                        },
+                    };
+                    let thumbnail = thumbnails.pop().unwrap();
+                    let _ = match thumbnail.write_jpeg(&mut output_file,255) {
+                        Err(err) => {
+                            println!("error while writing jpeg:{}", err);
+                            return Err(err)
+                        },
+                        Ok(()) => (),
+                    };
+                    Ok(())
+                },
+                "png" | "PNG" => {
+                    let mut thumbnails = match create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small]) {
+                        Err(err) => {
+                            println!("error while creating thumbnails:{}", err);
+                            return Err(err)
+                        },
+                        Ok(tns) => tns,
+                    };
+                    let thumbnail = thumbnails.pop().unwrap();
+                    match thumbnail.write_png(&mut output_file) {
+                        Err(err) => {
+                            println!("error while writing png:{}", err);
+                            return Err(err)
+                        },
+                        Ok(()) => (),
+                    };
+                    Ok(())
+                },
+                _ => Ok(()),
+            }
+        }
 }
+}
+
 fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
     let mut i: usize = 0;
     for pair in pairs {
-        match File::open(pair.source.clone()) {
-            Ok(input_file) => {
-                let source_path = Path::new(pair.source.as_str());
-                let source_extension = get_extension_from_filename(source_path).unwrap();
-                let reader = BufReader::new(input_file);
-                let mut output_file = File::create(pair.target.clone()).unwrap();
-                println!("{} {}",i, pair.target);
-                match source_extension {
-                    "jpg" | "jpeg" | "JPG" | "JPEG" => {
-                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]).unwrap();
-                        let thumbnail = thumbnails.pop().unwrap();
-                        thumbnail.write_jpeg(&mut output_file,255).unwrap()
-                    },
-                    "png" | "PNG" => {
-                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small]).unwrap();
-                        let thumbnail = thumbnails.pop().unwrap();
-                        thumbnail.write_png(&mut output_file).unwrap()
-                    },
-                    _ => (),
-                }
-                // let reader = BufReader::new(input_file);
-                // let mut  thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small, ThumbnailSize::Medium]).unwrap();
-
-                // let thumbnail = thumbnails.pop().unwrap();
-                // let mut buf = Cursor::new(Vec::<u8>::new());
-                // let mut output_file = File::create("tests/assets/test-th-small.png").unwrap();
-                // thumbnail.write_png(&mut output_file).unwrap();
-            }
-            Err(_) => {
-                println!("can't open: {}", pair.source)
-            }
-        };
-        i+=1;
+        create_thumbnail(pair.source, pair.target, Some(i));
+        i += 1
     }
     Ok(())
 }
@@ -127,30 +164,7 @@ fn create_target_folders(folders: Vec<Entry>) -> io::Result<()> {
 fn main() {
     let args = Args::parse();
     if args.file {
-        let source_path = Path::new(&args.source);
-        match File::open(&args.source.clone()) {
-            Ok(input_file) => {
-                let source_extension = get_extension_from_filename(source_path).unwrap();
-                let reader = BufReader::new(input_file);
-                let mut output_file = File::create(&args.target).unwrap();
-                match source_extension {
-                    "jpg" | "jpeg" | "JPG" | "JPEG" => {
-                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]).unwrap();
-                        let thumbnail = thumbnails.pop().unwrap();
-                        thumbnail.write_jpeg(&mut output_file,255).unwrap()
-                    },
-                    "png" | "PNG" => {
-                        let mut thumbnails = create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small]).unwrap();
-                        let thumbnail = thumbnails.pop().unwrap();
-                        thumbnail.write_png(&mut output_file).unwrap()
-                    },
-                    _ => (),
-                }
-            },
-            Err(err) => {
-                println!("error: {}", err)
-            }
-        }
+        create_thumbnail(args.source, args.target, None);
     } else {
         let path = Path::new(&args.source);
         match get_target_folders(path, args.target.clone()) {
