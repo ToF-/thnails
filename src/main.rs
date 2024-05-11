@@ -68,7 +68,6 @@ fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPa
                     file_stem.to_str().unwrap(),
                     extension.to_str().unwrap());
             work_path.set_file_name(new_file_name);
-            let target_path: PathBuf = Path::new(work_path.as_path()).to_path_buf();
             pairs.push(EntryPair { 
                 source: path.into_os_string().into_string().unwrap(),
                 target: work_path.into_os_string().into_string().unwrap(), });
@@ -153,7 +152,7 @@ fn create_thumbnail(source: String, target: String, number: Option<usize>) -> Th
 fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
     let mut i: usize = 0;
     for pair in pairs {
-        create_thumbnail(pair.source, pair.target, Some(i));
+        let _ = create_thumbnail(pair.source, pair.target, Some(i));
         i += 1
     }
     Ok(())
@@ -171,7 +170,7 @@ fn create_target_folders(folders: Vec<Entry>) -> io::Result<()> {
 fn main() {
     let args = Args::parse();
     if args.file {
-        create_thumbnail(args.source, args.target, None);
+        let _ = create_thumbnail(args.source, args.target, None);
     } else {
         let path = Path::new(&args.source);
         match get_target_folders(path, args.target.clone()) {
