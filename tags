@@ -328,3 +328,4 @@ touch_all	/home/tof/.cargo/registry/src/index.crates.io-6f17d22bba15001f/walkdir
 type_	/home/tof/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs	/^    pub fn type_(&self) -> Name {$/;"	f
 write_jpeg	/home/tof/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^    pub fn write_jpeg<W: Write + Seek>(self, writer: &mut W, quality: u8) -> ThumbResult<()> {$/;"	f
 write_png	/home/tof/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thumbnailer-0.5.1/src/lib.rs	/^    pub fn write_png<W: Write + Seek>(self, writer: &mut W) -> ThumbResult<()> {$/;"	f
+write_thunbnail	/home/tof/Coding/thnails/src/main.rs	/^fn write_thunbnail<R: std::io::Seek + std::io::Read>(reader: BufReader<R>, extension: &str, mut output_file: File) -> ThumbResult<()> {$/;"	f

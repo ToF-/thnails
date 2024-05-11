@@ -2,6 +2,7 @@ use std::io;
 use std::io::{Error,ErrorKind};
 use std::ffi::OsStr;
 use std::path::{Path, PathBuf};
+use mime::Mime;
 use walkdir::WalkDir;
 use clap::Parser;
 use thumbnailer::{create_thumbnails, ThumbnailSize};
@@ -76,6 +77,34 @@ fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPa
     Ok(pairs)
 }
 
+fn write_thunbnail<R: std::io::Seek + std::io::Read>(reader: BufReader<R>, extension: &str, mut output_file: File) -> ThumbResult<()> {
+    let mime = match extension {
+        "jpg" | "jpeg" | "JPG" | "JPEG" => mime::IMAGE_JPEG,
+        "png" | "PNG" => mime::IMAGE_PNG,
+        _ => panic!("wrong extension"),
+    };
+    let mut thumbnails = match create_thumbnails(reader, mime, [ThumbnailSize::Small]) {
+        Ok(tns) => tns,
+        Err(err) => {
+            println!("error while creating thumbnails:{:?}", err);
+            return Err(err)
+        },
+    };
+    let thumbnail = thumbnails.pop().unwrap();
+    let write_result = match extension {
+        "jpg" | "jpeg" | "JPG" | "JPEG" => thumbnail.write_jpeg(&mut output_file,255),
+        "png" | "PNG" => thumbnail.write_png(&mut output_file),
+        _ => panic!("wrong extension"),
+    };
+    match write_result {
+        Err(err) => {
+            println!("error while writing ihunbnail:{}", err);
+            Err(err)
+        },
+        ok => ok,
+    }
+}
+
 fn create_thumbnail(source: String, target: String, number: Option<usize>) -> ThumbResult<()> {
     if let Some(n) = number {
         println!("{:6} {}", n, target.clone())
@@ -97,7 +126,7 @@ fn create_thumbnail(source: String, target: String, number: Option<usize>) -> Th
                 Some(s) => s,
             };
             let reader = BufReader::new(input_file);
-            let mut output_file = match File::create(target.clone()) {
+            let output_file = match File::create(target.clone()) {
                 Err(err) => {
                     println!("error while creating file {}: {}",
                         target.clone(),
@@ -106,47 +135,9 @@ fn create_thumbnail(source: String, target: String, number: Option<usize>) -> Th
                 },
                 Ok(file) => file,
             };
-            match source_extension {
-                "jpg" | "jpeg" | "JPG" | "JPEG" => {
-                    let mut thumbnails = match create_thumbnails(reader, mime::IMAGE_JPEG, [ThumbnailSize::Small]) {
-                        Ok(tns) => tns,
-                        Err(err) => {
-                            println!("error while creating thumbnails:{:?}", err);
-                            return Err(err)
-                        },
-                    };
-                    let thumbnail = thumbnails.pop().unwrap();
-                    let _ = match thumbnail.write_jpeg(&mut output_file,255) {
-                        Err(err) => {
-                            println!("error while writing jpeg:{}", err);
-                            return Err(err)
-                        },
-                        Ok(()) => (),
-                    };
-                    Ok(())
-                },
-                "png" | "PNG" => {
-                    let mut thumbnails = match create_thumbnails(reader, mime::IMAGE_PNG, [ThumbnailSize::Small]) {
-                        Err(err) => {
-                            println!("error while creating thumbnails:{}", err);
-                            return Err(err)
-                        },
-                        Ok(tns) => tns,
-                    };
-                    let thumbnail = thumbnails.pop().unwrap();
-                    match thumbnail.write_png(&mut output_file) {
-                        Err(err) => {
-                            println!("error while writing png:{}", err);
-                            return Err(err)
-                        },
-                        Ok(()) => (),
-                    };
-                    Ok(())
-                },
-                _ => Ok(()),
-            }
-        }
-}
+            write_thunbnail(reader, source_extension, output_file)
+        },
+    }
 }
 
 fn create_all_thumbnails(pairs: Vec<EntryPair>) -> io::Result<()> {
