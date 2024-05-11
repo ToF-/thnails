@@ -1,7 +1,7 @@
 use std::io;
 use std::io::{Error,ErrorKind};
 use std::ffi::OsStr;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
 use clap::Parser;
 use thumbnailer::{create_thumbnails, ThumbnailSize};
@@ -53,7 +53,7 @@ fn get_target_folders(source_path: &Path, target: String) -> io::Result<Vec<Entr
 fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPair>> {
     let mut pairs: Vec<EntryPair> = Vec::new();
     for entry in WalkDir::new(source_path).into_iter().filter_map(|e| e.ok()) {
-        let path = entry.into_path();
+        let path: PathBuf = entry.into_path();
         let valid_ext = if let Some(ext) = path.extension() {
             ext == "jpg" || ext == "jpeg" || ext == "png" || ext == "JPG" || ext == "JPEG" || ext == "PNG"
         } else {
@@ -61,10 +61,17 @@ fn get_entry_pairs(source_path: &Path, target: String) -> io::Result<Vec<EntryPa
         };
         if valid_ext {
             let sub_path = path.strip_prefix(source_path).unwrap();
-            let target_path = Path::new(&target).join(sub_path);
+            let mut work_path = Path::new(&target).join(sub_path);
+            let extension = work_path.extension().unwrap();
+            let file_stem = work_path.file_stem().unwrap();
+            let new_file_name = format!("{}THUMB.{}",
+                    file_stem.to_str().unwrap(),
+                    extension.to_str().unwrap());
+            work_path.set_file_name(new_file_name);
+            let target_path: PathBuf = Path::new(work_path.as_path()).to_path_buf();
             pairs.push(EntryPair { 
                 source: path.into_os_string().into_string().unwrap(),
-                target: target_path.into_os_string().into_string().unwrap(), });
+                target: work_path.into_os_string().into_string().unwrap(), });
         }
     };
     Ok(pairs)
